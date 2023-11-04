@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h3 id="aa"></h3>
+        <h4 id="p1"></h4>
+        <script>
+            document.getElementById("aa").innerHTML = "Welcome to Anudip";
+
+            let x = "javascript"; //variable
+            let y = new String("JavaScript"); //String object
+
+            // document.getElementById("p1").innerHTML = typeof x+" "+
+            // typeof y;
+
+            //== compares the value
+            //=== compares the references
+            document.getElementById("p1").innerHTML = (x==y);
+
+            document.write("======================="+"<br>")
+
+            let text = "I am learning javascript, its fun to code with javascript";
+            document.write(text.indexOf("javascript")+"<br>");
+            document.write(text.lastIndexOf("javascript"));
+
+        </script>
+    </body>
+</html>

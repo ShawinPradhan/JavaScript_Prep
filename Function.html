@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            #a1
+            {
+                color: red;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="a1"></h1>
+        <script>
+            
+            function my(a,b){
+                return a * b;
+            }
+            
+            let res = my(23,78);
+            //innerHTML makes the changes during the runtime
+            document.getElementById("a1").innerHTML = res;
+        </script>
+    </body>
+</html>
