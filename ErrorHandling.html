@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Handling in HTML</title>
+</head>
+<body>
+
+<script>
+    function parseJSON(jsonString) {
+        try {
+            let parsedData = JSON.parse(jsonString);
+            return parsedData;
+        } catch (error) {
+            // Handle the error
+            console.error("Error while parsing JSON:", error);
+            return null; // Return null or any other value to indicate failure
+        }
+    }
+
+    let invalidJSONString = '{"name": "John", "age": 30, "city": "New York"'; // Missing closing brace
+    let validJSONString = '{"name": "Alice", "age": 25, "city": "Los Angeles"}';
+
+    let invalidData = parseJSON(invalidJSONString);
+    let validData = parseJSON(validJSONString);
+
+    console.log("Invalid Data:", invalidData); // Output: null
+    console.log("Valid Data:", validData); // Output: { name: 'Alice', age: 25, city: 'Los Angeles' }
+</script>
+
+
+</body>
+</html>
