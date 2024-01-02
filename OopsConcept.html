@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP Concepts in JavaScript</title>
+</head>
+<body>
+
+<script>
+    // Constructor Function for creating objects
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Prototype method to introduce encapsulation
+    Person.prototype.greet = function() {
+        return `Hello, my name is ${this.name} and I'm ${this.age} years old.`;
+    };
+
+    // Creating objects using the constructor function
+    let person1 = new Person('Alice', 30);
+    let person2 = new Person('Bob', 25);
+
+    // Inheritance using prototypes
+    function Student(name, age, grade) {
+        Person.call(this, name, age);
+        this.grade = grade;
+    }
+
+    // Linking prototypes for inheritance
+    Student.prototype = Object.create(Person.prototype);
+    Student.prototype.constructor = Student;
+
+    // Adding a method specific to Student
+    Student.prototype.study = function() {
+        return `${this.name} is studying in grade ${this.grade}.`;
+    };
+
+    // Creating Student objects
+    let student1 = new Student('Charlie', 20, 'Senior');
+    let student2 = new Student('Diana', 22, 'Junior');
+
+    // Polymorphism example
+    function describe(entity) {
+        if (entity instanceof Person) {
+            return entity.greet();
+        } else if (entity instanceof Student) {
+            return `${entity.greet()} ${entity.study()}`;
+        } else {
+            return 'Unknown entity';
+        }
+    }
+
+    // Output using console.log or document.write
+    console.log(describe(person1)); // Output: Hello, my name is Alice and I'm 30 years old.
+    console.log(describe(student2)); // Output: Hello, my name is Diana and I'm 22 years old. Diana is studying in grade Junior.
+</script>
+
+</body>
+</html>
