@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+class Animal {
+	display(eat, stay, fly){
+		document.write(eat +" "+ stay +" "+fly);
+	}
+}
+class Dog extends Animal {
+		
+		display(eat, stay, fly){
+		document.write(eat +" "+ stay +" "+fly + "<br>");
+	}
+} 
+
+class Peacock extends Animal{
+	
+	display(eat, stay, fly){
+		document.write(eat +" "+ stay +" "+fly+ "<br>");
+	}
+}
+
+var d = new Dog();
+d.display("biscuit", "home", false);
+
+var p = new Peacock();
+p.display("snake", "jungle", true);
+
+</script>
+</body>
+</html>

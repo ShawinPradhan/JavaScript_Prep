@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+class Person {
+	constructor(name,surname){
+		this.name = name;
+		this.surname = surname;
+	}
+}
+class Employee extends Person{
+	constructor(empid, empphone, dept){
+		super("Mamta","Boga");
+		this.empid = empid;
+		this.empphone = empphone;
+		this.dept = dept;
+	}
+}
+var e = new Employee(101, 87676542, "IT");
+document.write(e.name +" "+ e.surname +" "+ e.empid +" "+e.empphone +" "+ e.dept);
+</script>
+</body>
+</html>

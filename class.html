@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+class Student{
+	constructor(name, age, qual){
+		this.name = name;
+		this.age = age;
+		this.qual = qual;
+	}
+	display(){
+		console.log(this.name +" "+ this.age +" "+ this.qual);
+	}
+	
+	static show(){
+		console.log("Hiiiii... good evening");
+	}
+}	
+	var obj = new Student('Ram',25,'beit');
+	var obj1 = new Student('Sam',20,'bscit');
+	
+	obj.display();
+	obj1.display();
+	Student.show();
+</script>
+</body>
+</html>
